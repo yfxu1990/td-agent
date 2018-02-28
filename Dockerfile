@@ -10,7 +10,8 @@ ADD RPM-GPG-KEY-td-agent /etc/pki/rpm-gpg/RPM-GPG-KEY-td-agent
 RUN yum -y install td-agent && yum clean all
 
 # install fluent biquery plugin
-RUN /usr/sbin/td-agent-gem install fluent-plugin-bigquery fluent-plugin-google-cloud --no-ri --no-rdoc -V
+# RUN /usr/sbin/td-agent-gem install fluent-plugin-bigquery fluent-plugin-google-cloud --no-ri --no-rdoc -V
+RUN /usr/sbin/td-agent-gem install fluent-plugin-mongo
 RUN yum clean all && yum swap fakesystemd systemd
 
 VOLUME ["/etc/td-agent"]

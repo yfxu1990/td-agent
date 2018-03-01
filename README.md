@@ -4,3 +4,6 @@ git push -u origin master
  test
 # test
 in branch1 commit
+
+in branch1 commit2 
+in branch1 commit2
